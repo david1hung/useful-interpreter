@@ -3,10 +3,6 @@ open Printf
 #use "code.ml";;
 
 let testNum = ref (1);;
-let printMsg testNum msg = 
-	(*lettestNum = testNum + 1 in *)
-	Printf.printf "Test %d: %s\n" testNum msg;;
-
 let file = "testOutput.txt";;
 let oc = open_out file;;
 
