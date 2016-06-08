@@ -1,0 +1,8 @@
+# let rec rev n = 
+	match n with 
+    [] -> []
+    | first::rest -> rev(rest)@[first];;
+      val rev : 'a list -> 'a list = <fun>
+
+# rev [1;2;3;4;5];;
+- : int list = [5; 4; 3; 2; 1]
