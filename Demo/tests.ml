@@ -14,6 +14,7 @@ let printToFile msg =
 
 
 
+if (rev [1;2;3] =  [3; 2; 1] ) then printToFile "Success" else printToFile "Failed";;
 
 close_out oc;
 					exit 0;;
