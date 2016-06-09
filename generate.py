@@ -67,8 +67,10 @@ fout = open('test2.ml', 'w')
 testGen_init = """
 open Printf
 
+#use "code.ml" ;;
+
 let testNum = ref (1);;
-let file = "testOutput2.txt";;
+let file = "testOutput.txt";;
 let oc = open_out file;;
 
 let printToFile msg = 
@@ -78,9 +80,6 @@ let printToFile msg =
 
 
 """
-
-
-
 
 testGen_mid = ""
 
@@ -102,7 +101,9 @@ for i in testCaseList:
 testGen_mid += "\n"
 fout.write(testGen_mid)
 
-testGen_end = """\nclose_out oc;"""
+testGen_end = """\nclose_out oc;
+					exit 0;;
+					"""
 fout.write(testGen_end)
 
 
