@@ -14,7 +14,7 @@ while line : # read each line
 	if line != '\n' :
 		line = line.rstrip() #remove \n
 	allLines.append(line)
-	print(line)
+	#print(line)
 
 	line = f.readline()
 
@@ -32,16 +32,17 @@ x = testCase()
 
 for i in allLines :
 	if i == '\n': #just a line, means end test obj
-		print("Found Just a line")
+		#print("Found Just a line")
+		a = 0
 
 	else :
-		print("Check: " + i)
+		#print("Check: " + i)
 
 		if i.startswith("- :") :
 			index = i.index('=') #find the equal, get everything after
 			i = i[index+1:]
 			x.result = i
-			print i
+			#print i
 
 			# start new testcase
 			testCaseList.append(x)
@@ -54,14 +55,14 @@ for i in allLines :
 			i = i.replace(";;",  '')
 			i = i.replace("# ",  '')
 
-			print(i)
+			#print(i)
 			x.setup.append(i)
 
 #testCaseList.append(x)
 
 
-printTestCases(testCaseList)
-fout = open('test2.ml', 'w')
+#printTestCases(testCaseList)
+fout = open('tests.ml', 'w')
 
 
 testGen_init = """

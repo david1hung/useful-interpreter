@@ -5,7 +5,7 @@ class testCase:
 		self.setup = []
 		self.result = 0
 
-f_testCases = open('testCases.txt', 'r')
+f_testCases = open('testCases.ml', 'r')
 
 allLines = []
 line = f_testCases.readline()
@@ -68,7 +68,7 @@ testGen_init = """
 <html>
 <head><title>Test Results</title></head>
 <body>
-<h1> Test Results </h1>
+<h2> Test Results </h2>
 """
 
 testGen_mid = ""
