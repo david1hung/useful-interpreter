@@ -20,4 +20,14 @@ The Useful-interpreter was an exploration on how to make the REPL environment be
 6. And HTML results is displayed
 
 
-### The Newest code is in the Demo folder, run from there
+## Setup
+Currently the setup only works on Mac because it uses AppleScript and kqwait which only have Mac versions. 
+
+Auto setup
+* Run init.sh and all the files needed will be opened
+
+Manual setup
+* Open code.ml (main code base to edit)
+* Open testCases.ml (test cases code)* Run ./checkSave code.mlo This listens to whether or not code.ml is updated	* Run ./checkTest testCases.ml code.mlo This listens to whether or not testCases.ml or code.ml is updated, in order to automatically run or re-run the testCases.* Done!* Type some code in code.ml and click Save
+
+###The Sample directory has a version with some sample code and test outputs
