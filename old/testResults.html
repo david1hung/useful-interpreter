@@ -1,0 +1,46 @@
+
+<html>
+<head><title>Test Results</title></head>
+<body>
+<h1> Test Results </h1>
+<pre style='color:Green'><strong>Test 1: Success
+</strong>   # let rec rev n =
+   	match n with
+       [] -> []
+       | first::rest -> rev(rest)@[first];;
+         val rev : 'a list -> 'a list = <fun>
+   # rev [1;2;3;4;5];;
+   - : int list = [5; 4; 3; 2; 1]</pre>
+<pre style='color:Green'><strong>Test 2: Success
+</strong>   # rev [5;4;3;2;1];;
+   - : int list = [1; 2; 3; 4; 5]</pre>
+<pre style='color:Green'><strong>Test 3: Success
+</strong>   # let rec intOfDigits (l: int list) : int =
+   	match l with
+       []->0
+       |[last]->last
+       |cur::next::rest -> intOfDigits(cur*10+next::rest);;
+   val intOfDigits : int list -> int = <fun>
+   # intOfDigits([1;2;3;4;5]);;
+   - : int = 12345</pre>
+<pre style='color:Green'><strong>Test 4: Success
+</strong>   # intOfDigits([5;4;3;2;1]);;
+   - : int = 54321</pre>
+<pre style='color:Green'><strong>Test 5: Success
+</strong>   # rev [1;3;5;7;9];;
+   - : int list = [9; 7; 5; 3; 1]</pre>
+<pre style='color:Red'><strong>Test 6: Failed
+</strong>   # rev [2;4;6];;
+   - : int list = [9; 7; 5; 3; 1]</pre>
+<pre style='color:Green'><strong>Test 7: Success
+</strong>   # rev [2;4;6];;
+   - : int list = [6;4;2]</pre>
+<pre style='color:Red'><strong>Test 8: Failed
+</strong>   # intOfDigits([1;0;0;0;1]);;
+   - : int = 1000</pre>
+<pre style='color:Green'><strong>Test 9: Success
+</strong>   # intOfDigits([1;0;0;0;1]);;
+   - : int = 10001</pre>
+
+
+</body>

@@ -1,0 +1,26 @@
+
+<html>
+<head><title>Test Results</title></head>
+<body>
+<h2> Test Results </h2>
+<pre style='color:Green'>
+<strong>Test 1: Success</strong>   # rev [1;2;3];;
+   - : int list = [3; 2; 1]
+</pre>
+<pre style='color:Red'>
+<strong>Test 2: Failed</strong>   # rev [1;2;3];;
+   - : int list = [3; 2]
+</pre>
+<pre style='color:Green'>
+<strong>Test 3: Success</strong>   # let rec intOfDigits (l: int list) : int =
+   	match l with
+       []->gt0
+       |[last]->&gtlast
+       |cur::next::rest -&gt intOfDigits(cur*10+next::rest) ;;
+   val intOfDigits : int list -&gt int = &ltfun&gt
+   # intOfDigits [1;2;3;4;5];;
+   - : int = 12345
+</pre>
+
+
+</body>

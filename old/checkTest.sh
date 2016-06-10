@@ -3,6 +3,6 @@
 # calls op.sh to open $1 in a terminal
 echo "Checking $1"
 while ./kqwait $1 $2; do
-	echo "Save Detected on $1" 
+	echo "Save Detected" 
 	./runTests.sh	
 done
